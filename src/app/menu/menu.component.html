@@ -1,0 +1,66 @@
+<!-- Overlay -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-40 ibm-plex-serif-mediumRop" (click)="closeModal()" [ngClass]="{'hidden': !isVisible}"></div>
+
+<!-- Menu Burger -->
+<div #modal class="fixed top-0 left-0 w-64 h-full bg-white z-50 shadow-lg flex flex-col justify-between" [ngClass]="{'hidden': !isVisible}">
+  <!-- Menu principal -->
+  <div class="p-6">
+    <div class="text-2xl font-bold mb-32">
+      <div class="flex flex-row items-center gap-1">
+        <img class="w-10" src="/images/logowhite.png" alt="logo">
+        <h1 class="text-gray-800 text-xs">QUALIA <br />COMMUNICATION</h1>
+      </div>
+    </div>
+
+    <ul class="space-y-4">
+      <li appMenuModale (click)="closeModal()" class="cursor-pointer hover:text-amber-500">Home</li>
+      <li appMenuModale="/about" (click)="closeModal()" class="cursor-pointer hover:text-amber-500">About</li>
+      <li appMenuModale="/service" (click)="closeModal()" class="cursor-pointer hover:text-amber-500">Portfolio</li>
+    </ul>
+
+    <div class="relative group mt-8 inline-block overflow-hidden rounded border border-white bg-orange-400">
+        <a
+          href="#"
+          class="relative z-10 block px-4 py-2 font-bold text-white transition duration-300 group-hover:text-black"
+        >
+          Get in Touch
+        </a>
+
+        <!-- Vague de fond -->
+        <span
+          class="absolute inset-0 z-0 bg-white scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"
+        ></span>
+      </div>
+  </div>
+
+  <!-- Réseaux sociaux -->
+  <div class="p-4 flex justify-center space-x-4 border-t">
+    <!-- Twitter -->
+    <a href="https://twitter.com/tonprofil" target="_blank" aria-label="Twitter">
+      <svg class="w-6 h-6 text-gray-700 hover:text-sky-500" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M24 4.6c-.9.4-1.8.6-2.8.8 1-0.6 1.7-1.5 2-2.6-1 .6-2 .9-3.1 1.1a4.4 4.4 0 00-7.5 4C8 7.7 4.2 5.9 1.7 2.9c-.5.8-.7 1.7-.7 2.7 0 1.8 0.9 3.4 2.2 4.4-.8 0-1.6-.2-2.3-.6v.1c0 2.6 1.9 4.7 4.4 5.2a4.7 4.7 0 01-2.2.1 4.6 4.6 0 004.3 3.2A8.9 8.9 0 010 19.5 12.6 12.6 0 006.8 21c8.1 0 12.5-6.6 12.5-12.3v-.6c.9-.6 1.7-1.4 2.3-2.3z"/>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/tonprofil" target="_blank" aria-label="Facebook">
+      <svg class="w-6 h-6 text-gray-700 hover:text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.5.8-1.5 1.5V12h2.6l-.4 3h-2.2v7C18.3 21.1 22 17 22 12z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/tonprofil" target="_blank" aria-label="Instagram">
+      <svg class="w-6 h-6 text-gray-700 hover:text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9A5.5 5.5 0 0116.5 22h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm0 2A3.5 3.5 0 004 7.5v9A3.5 3.5 0 007.5 20h9a3.5 3.5 0 003.5-3.5v-9A3.5 3.5 0 0016.5 4h-9zm4.5 3.5a5 5 0 110 10 5 5 0 010-10zm0 2A3 3 0 1015 12a3 3 0 00-3-2.95zm4.25-2a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/tonnumero" target="_blank" aria-label="WhatsApp">
+      <svg class="w-6 h-6 text-gray-700 hover:text-green-500" fill="currentColor" viewBox="0 0 32 32">
+        <path d="M16.2 2.9A13 13 0 003 15.8a13 13 0 001.7 6.5L3 29l6.9-1.8a13 13 0 006.3 1.6h.1a13 13 0 0013-13.1A13 13 0 0016.2 2.9zm0 23.8a10.6 10.6 0 01-5.3-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a10.5 10.5 0 1119.6-5.4 10.5 10.5 0 01-10 10.1zM21 18.4c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.1l-.9 1.1c-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.2-1.3a8.2 8.2 0 01-1.5-2c-.2-.4 0-.6.2-.7l.6-.7c.1-.2.2-.4.3-.6s0-.4 0-.5l-.5-1.4c-.1-.4-.4-.5-.7-.5h-.6c-.3 0-.6 0-.8.3-.3.3-1 1-1 2.4s1 2.7 1.2 2.9c.2.2 2 3.2 5 4.4a17.5 17.5 0 002.5.7 6 6 0 002.8-.3c.9-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/>
+      </svg>
+    </a>
+  </div>
+</div>

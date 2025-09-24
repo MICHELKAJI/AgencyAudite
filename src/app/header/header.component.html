@@ -1,0 +1,54 @@
+<div>
+  <header class="fixed top-0 w-full z-50 hidden lg:block ibm-plex-serif-mediumRop">
+    <div class=" "  [ngClass]="isScrolled?'flex justify-between items-center bg-gray-800 px-40 text-white p-4':'flex justify-between items-center bg-gray-800/30 px-40 text-white p-4 mt-10'">
+         <div class="cursor-pointer" appMenuModale>
+            <img class="w-32" src="images/logo.png" alt="">
+         </div>
+         <nav>
+            <ul class="flex flex-row space-x-6">
+             <li class="relative group cursor-pointer text-gray-200 hover:text-green-500 transition-colors duration-300">
+               Accueil
+               <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+             </li>
+             <li class="relative group cursor-pointer text-gray-200 hover:text-green-500 transition-colors duration-300">
+               Services
+               <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+             </li>
+             <li class="relative group cursor-pointer text-gray-200 hover:text-green-500 transition-colors duration-300">
+               A propos
+               <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+             </li>
+           </ul>
+         </nav>
+       <div class="relative group inline-block overflow-hidden rounded border border-green-500 bg-green-500">
+        <a href="#" class="relative z-10 block px-4 py-2 font-bold text-white transition duration-300 group-hover:text-black">
+          Contactez-nous
+        </a>
+        <!-- Vague de fond -->
+        <span
+          class="absolute inset-0 z-0 bg-white scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"
+        ></span>
+      </div>
+    </div>
+</header>
+
+<header
+    [ngClass]="isScrolled ? 'fixed block lg:hidden w-full shadow-2xl bg-gray-800 transition duration-300 z-10 ibm-plex-serif-mediumRop' : 'fixed block lg:hidden w-full bg-gray-800/50 z-50 ibm-plex-serif-mediumRop'">
+    <div class="flex justify-between items-center p-3 sm:p-4">
+      <h1 class="text-xl sm:text-2xl font-bold">
+        <div class="cursor-pointer" appMenuModale><img class="w-32" src="/images/logo.png" alt=""></div>
+      </h1>
+
+      <button (click)="modale.showModal()" class="p-2 focus:outline-none">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- MODALE MOBILE -->
+    <app-menu #modale></app-menu>
+</header>
+</div>
+
