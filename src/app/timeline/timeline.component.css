@@ -1,0 +1,6 @@
+/* Optionnel : ajustement du point central sur mobile */
+@media (max-width: 768px) {
+  .timeline-step {
+    text-align: center;
+  }
+}
