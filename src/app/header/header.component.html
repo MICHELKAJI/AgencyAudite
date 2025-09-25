@@ -21,15 +21,16 @@
            </ul>
          </nav>
        <div class="relative group inline-block overflow-hidden rounded border border-green-500 bg-green-500">
-        <a href="#" class="relative z-10 block px-4 py-2 font-bold text-white transition duration-300 group-hover:text-black">
+        <button (click)="modaleContact.showModal()" class="relative z-10 block px-4 py-2 font-bold text-white transition duration-300 group-hover:text-black">
           Contactez-nous
-        </a>
+        </button>
         <!-- Vague de fond -->
         <span
           class="absolute inset-0 z-0 bg-white scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"
         ></span>
       </div>
     </div>
+    <app-modale-contact #modaleContact></app-modale-contact>
 </header>
 
 <header
@@ -49,6 +50,7 @@
 
     <!-- MODALE MOBILE -->
     <app-menu #modale></app-menu>
+    <app-modale-contact #modaleContact></app-modale-contact>
 </header>
 </div>
 

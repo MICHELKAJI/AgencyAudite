@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, ElementRef, inject  } from '@angular/core';
 import { gsap } from "gsap";
+import { ModaleContactComponent } from '../modale-contact/modale-contact.component';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [ModaleContactComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.css'
 })

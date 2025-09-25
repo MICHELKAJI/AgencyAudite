@@ -1,3 +1,4 @@
+<div>
 <section class="relative min-h-screen flex justify-center items-center text-white text-center px-6 overflow-hidden">
 
   <!-- Vidéo en fond -->
@@ -32,9 +33,10 @@
       Analyse claire, plan d’action concret, résultats mesurables
     </p>
 
-    <button class="mt-8 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl">
+    <button (click)="modaleContact.showModal()" class="mt-8 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl">
       Demander un audit maintenant
     </button>
   </div>
-
 </section>
+<app-modale-contact #modaleContact></app-modale-contact>
+</div>
