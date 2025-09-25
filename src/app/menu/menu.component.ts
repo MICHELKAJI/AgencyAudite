@@ -1,13 +1,14 @@
 import { NgClass } from '@angular/common';
 import { Component, Output, EventEmitter, ElementRef, ViewChild  } from '@angular/core';
 import gsap from 'gsap';
+import { ModaleContactComponent } from '../modale-contact/modale-contact.component';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, ModaleContactComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })

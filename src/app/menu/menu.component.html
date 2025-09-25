@@ -1,4 +1,5 @@
 <!-- Overlay -->
+<div>
 <div class="fixed inset-0 bg-black bg-opacity-50 z-50 ibm-plex-serif-mediumRop" (click)="closeModal()" [ngClass]="{'hidden': !isVisible}"></div>
 
 <!-- Menu Burger -->
@@ -18,12 +19,12 @@
     </ul>
 
     <div class="relative group mt-8 inline-block overflow-hidden rounded border border-white bg-green-500">
-        <a
-          href="#"
+        <button
           class="relative z-10 block px-4 py-2 font-bold text-white transition duration-300 group-hover:text-black"
+          (click)="modaleContact.showModal()"
         >
           Contactez-nous
-        </a>
+        </button>
 
         <!-- Vague de fond -->
         <span
@@ -62,4 +63,6 @@
       </svg>
     </a>
   </div>
+</div>
+ <app-modale-contact #modaleContact></app-modale-contact>
 </div>
