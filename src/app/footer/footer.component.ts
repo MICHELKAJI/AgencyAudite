@@ -23,5 +23,16 @@ export class FooterComponent implements AfterViewInit  {
       ease: 'power3.out'
     });
   }
+  
+  scrollTo(targetId: string) {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: `#${targetId}`,
+        offsetY: 80 // ajuste si t'as une navbar
+      },
+      ease: 'power2.inOut'
+    });
+  }
 
 }

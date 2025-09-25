@@ -6,8 +6,6 @@ import emailjs from 'emailjs-com';
 
 
 
-
-
 @Component({
   selector: 'app-modale-contact',
   standalone: true,
