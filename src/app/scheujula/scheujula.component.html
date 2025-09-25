@@ -1,0 +1,20 @@
+<section class="relative bg-gradient-to-br from-green-50 to-green-100 py-20 overflow-hidden">
+  <!-- Halo décoratif -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 bg-green-300 rounded-full filter blur-3xl opacity-30 pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-20 pointer-events-none"></div>
+
+  <div class="rdv-container max-w-5xl mx-auto px-6 relative">
+    <!-- Titre et description -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Réservez votre rendez-vous</h2>
+      <p class="text-gray-500">Choisissez votre créneau et planifiez un échange personnalisé.</p>
+    </div>
+
+    <!-- Bloc Calendly inline -->
+    <div class="bg-white rounded-xl shadow-xl p-6">
+      <div class="calendly-inline-widget w-full h-[100vh] rounded-lg"
+           [attr.data-url]="calendlyUrl">
+      </div>
+    </div>
+  </div>
+</section>

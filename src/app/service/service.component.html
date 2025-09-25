@@ -1,0 +1,30 @@
+<section class="relative py-40 bg-gradient-to-br from-gray-50 to-gray-300 overflow-hidden">
+  <!-- Motif décoratif en points -->
+  <div class="absolute left-0 top-0 w-96 h-96 bg-[radial-gradient(black_1px,transparent_1px)] [background-size:12px_12px] opacity-10"></div>
+  <div class="absolute right-0 bottom-0 w-96 h-96 bg-[radial-gradient(black_1px,transparent_1px)] [background-size:12px_12px] opacity-10"></div>
+
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-gray-500">Ce que contient l’audit</h2>
+    <p class="text-gray-500 mb-16">Un aperçu clair des points analysés pour booster votre stratégie</p>
+
+    <!-- Liste animée -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+      <div *ngFor="let item of auditItems; let i = index"
+           class="check-item opacity-0 translate-y-6 flex items-start bg-white rounded-xl shadow-lg p-6 space-x-4 hover:shadow-xl transition-shadow duration-300">
+        <div class="relative flex items-center justify-center w-8 h-8">
+          <input type="checkbox"
+                 class="peer absolute w-0 h-0 opacity-0" 
+                 id="check-{{i}}" />
+          <label for="check-{{i}}"
+                 class="w-6 h-6 rounded border-2 border-gray-300 peer-checked:bg-green-500 peer-checked:border-green-500 relative flex items-center justify-center transition-colors duration-300">
+            <svg class="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity duration-300"
+                 fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </label>
+        </div>
+        <span class="text-gray-700 text-base font-medium">{{item}}</span>
+      </div>
+    </div>
+  </div>
+</section>

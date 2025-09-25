@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopBarComponent } from './top-bar.component';
+import { CallToActionComponent } from './call-to-action.component';
 
-describe('TopBarComponent', () => {
-  let component: TopBarComponent;
-  let fixture: ComponentFixture<TopBarComponent>;
+describe('CallToActionComponent', () => {
+  let component: CallToActionComponent;
+  let fixture: ComponentFixture<CallToActionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopBarComponent]
+      imports: [CallToActionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TopBarComponent);
+    fixture = TestBed.createComponent(CallToActionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
